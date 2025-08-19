@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeBurger - Hamburguesería Temática Anime</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff1493;
+            --secondary: #00ffff;
+            --accent: #ff8c00;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #111;
+            color: white;
+        }
+        
+        .anime-title {
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 4px 4px 0px var(--primary), 
+                         8px 8px 0px rgba(0,0,0,0.2);
+        }
+        
+        .menu-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px var(--accent);
+        }
+        
+        .border-anime {
+            border: 3px dashed var(--secondary);
+        }
+        
+        .hover-glow:hover {
+            filter: drop-shadow(0 0 15px var(--primary));
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="bg-black py-4 border-b-4 border-purple-600 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="anime-title text-2xl md:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
+                ANIMEBURGER
+            </h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#inicio" class="hover:text-pink-500 transition">Inicio</a></li>
+                    <li><a href="#menu" class="hover:text-cyan-400 transition">Menú</a></li>
+                    <li><a href="#galeria" class="hover:text-orange-400 transition">Galería</a></li>
+                    <li><a href="#contacto" class="hover:text-yellow-300 transition">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1055cc03-8c92-4ebd-8d8f-e6a55463f22b.png" alt="Escena de fondo futurista de ciudad anime con neones rosados y azules donde aparecen hamburguesas gigantes flotando" class="w-full h-full object-cover opacity-50">
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="anime-title text-4xl md:text-7xl mb-6 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
+                SABORES ÉPICOS <br> ESTILO ANIME
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+                Hamburguesas inspiradas en tus personajes favoritos, preparadas con ingredientes premium y mucha pasión otaku.
+            </p>
+            <a href="#menu" class="inline-block bg-gradient-to-r from-pink-500 to-purple-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-110">
+                VER MENÚ
+            </a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <h2 class="anime-title text-3xl md:text-5xl text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+                MENÚ ESPECIAL
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Item 1 -->
+                <div class="menu-item bg-gray-800 p-6 rounded-lg border-anime transition-all duration-300 cursor-pointer">
+                    <div class="relative h-64 mb-4 overflow-hidden rounded-md">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/bb65a96d-57fe-487c-a23c-48dd27d019a7.png" alt="Hamburguesa Naruto Ramen con carne wagyu, tocino crujiente, huevo tempura y salsa especial inspirada en el ramen de Ichiraku" class="w-full h-full object-cover hover-glow transition">
+                        <span class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">MÁS VENDIDO</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-pink-400 mb-2">Naruto Ramen Burger</h3>
+                    <p class="text-gray-300 mb-4">Carne wagyu, tocino, huevo tempura, queso fundido y nuestra salsa ramen secreta. Incluye narutomaki.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-cyan-300">$14.99</span>
+                        <button class="bg-pink-500 hover:bg-cyan-400 text-white px-4 py-2 rounded-md transition">Ordenar</button>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="menu-item bg-gray-800 p-6 rounded-lg border-anime transition-all duration-300 cursor-pointer">
+                    <div class="relative h-64 mb-4 overflow-hidden rounded-md">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f3cc0cff-7e89-45cf-b67e-5bcde8c0aeb8.png" alt="Hamburguesa Sailor Moon con forma de luna creciente, pan morado, carne de res, queso azul y decoración de estrella dorada" class="w-full h-full object-cover hover-glow transition">
+                    </div>
+                    <h3 class="text-2xl font-bold text-purple-300 mb-2">Sailor Moon Burger</h3>
+                    <p class="text-gray-300 mb-4">Pan morado natural con tinta de fruta, doble carne, queso azul y salsa de la luna (mayo con ajo negro).</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-cyan-300">$12.99</span>
+                        <button class="bg-pink-500 hover:bg-cyan-400 text-white px-4 py-2 rounded-md transition">Ordenar</button>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="menu-item bg-gray-800 p-6 rounded-lg border-anime transition-all duration-300 cursor-pointer">
+                    <div class="relative h-64 mb-4 overflow-hidden rounded-md">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1f3619e0-5640-4f22-8a2a-148d23fea811.png" alt="Hamburguesa Dragon Ball con pan redondo y amarillo como una esfera del dragón, rellena con triple carne, tocino y salsa de ají picante" class="w-full h-full object-cover hover-glow transition">
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-300 mb-2">Dragon Ball Burger</h3>
+                    <p class="text-gray-300 mb-4">Triple carne angus, triple queso, tocino extra crujiente y nuestra salsa kamehameha picante.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-xl font-bold text-cyan-300">$16.99</span>
+                        <button class="bg-pink-500 hover:bg-cyan-400 text-white px-4 py-2 rounded-md transition">Ordenar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="anime-title text-3xl md:text-5xl text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-cyan-400">
+                GALERÍA OTAKU
+            </h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/17e98655-6f2c-4ae0-b4d8-2844608bbd09.png" alt="Interior del restaurante con decoración anime, murales de personajes y luces de neón" class="w-full h-full object-cover hover-glow transition transform hover:scale-110 duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/749aaf5f-f59d-4650-a492-630b4286182b.png" alt="Primer plano de nuestra Hamburguesa One Piece con temática pirata y decoración de bandera Jolly Roger" class="w-full h-full object-cover hover-glow transition transform hover:scale-110 duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f329f51f-f053-4caf-8158-3e1a23088b9d.png" alt="Nuestro chef preparando una hamburguesa usando gorra y delantal con diseño de Goku" class="w-full h-full object-cover hover-glow transition transform hover:scale-110 duration-500">
+                </div>
+                <div class="overflow-hidden rounded-lg">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/fe5609b1-f02d-4d88-b1cf-bfbfa83cbd5f.png" alt="Grupo de clientes felices disfrazados de personajes anime disfrutando sus hamburguesas" class="w-full h-full object-cover hover-glow transition transform hover:scale-110 duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-gray-800 rounded-xl p-8 md:p-12 border-anime">
+                <h2 class="anime-title text-3xl md:text-5xl text-center mb-8 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500">
+                    CONTÁCTANOS
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-pink-400 mb-4">Visítanos</h3>
+                        <p class="text-gray-300 mb-6">Calle Anime 123, Distrito Otaku<br> Ciudad Kawaii</p>
+                        
+                        <h3 class="text-2xl font-bold text-cyan-400 mb-4">Horario</h3>
+                        <p class="text-gray-300 mb-6">
+                            Lunes a Viernes: 11:00 AM - 10:00 PM<br>
+                            Sábado y Domingo: 10:00 AM - 12:00 AM
+                        </p>
+                        
+                        <h3 class="text-2xl font-bold text-purple-400 mb-4">Síguenos</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-pink-400 hover:text-white text-2xl transition">FB</a>
+                            <a href="#" class="text-blue-400 hover:text-white text-2xl transition">IG</a>
+                            <a href="#" class="text-red-500 hover:text-white text-2xl transition">YT</a>
+                            <a href="#" class="text-green-400 hover:text-white text-2xl transition">TikTok</a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <form class="space-y-4">
+                            <input type="text" placeholder="Tu nombre" class="w-full bg-gray-700 text-white px-4 py-3 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500">
+                            <input type="email" placeholder="Tu email" class="w-full bg-gray-700 text-white px-4 py-3 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500">
+                            <textarea placeholder="Tu mensaje" rows="4" class="w-full bg-gray-700 text-white px-4 py-3 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                            <button type="submit" class="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-full text-lg transition-all transform hover:scale-105">
+                                ENVIAR MENSAJE
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t-4 border-purple-600">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 mb-4">
+                © 2025 AnimeBurger - Todos los derechos reservados<br>
+                Hamburguesas con Estilo Otaku
+            </p>
+            <div class="flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-pink-400 transition">Términos</a>
+                <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Privacidad</a>
+                <a href="#" class="text-gray-400 hover:text-yellow-400 transition">Trabaja con Nosotros</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
